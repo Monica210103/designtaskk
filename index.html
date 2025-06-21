@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Leave Report</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #f9f9f9;
+        }
+
+        .sidebar a {
+            display: flex;
+            align-items: center;
+            text-align: center;
+            flex-direction: column;
+            padding: 15px;
+            color: #333;
+            text-decoration: none;
+        }
+
+        .sidebar{
+            height: 87vh;
+
+        }
+
+        .sidebar a:hover,
+        .sidebar a.active {
+            background-color: #e0e0e0;
+        }
+
+        .topbar {
+            background-color: #493089;
+            color: #fff;
+            padding: 10px 20px;
+        }
+
+        .topbar .profile-img {
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+        }
+
+        .card {
+            border: none;
+        }
+
+        table thead {
+            background-color: skyblue !important;
+        }
+
+        .badge-pending {
+            background-color: #ffe08a;
+            color: #6b4f00;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid p-0">
+        <div class="topbar d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <button class="btn btn-light me-3 d-md-none" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#sidebar" aria-controls="sidebar">☰</button>
+                <div class="fw-bold fs-1 text-success me-4">OCC</div>
+                <div>
+                    Hello, <strong>Rashid Saif Khamis Al Badi</strong><br>
+                    ID : 1004 || OMANI STAFF
+                </div>
+            </div>
+            <div class="d-flex align-items-center">
+                <div class="me-3 text-end me-5">Fri 20-Jun-2025<br>17:11:21</div>
+                <i class="fa-solid fa-bell me-4 "></i>
+                <img src="https://i.pinimg.com/1200x/7c/c3/04/7cc304e8b6d442cc6b927d0168b2757b.jpg" class="profile-img"
+                    alt="profile">
+            </div>
+        </div>
+
+        <div class="row g-0">
+            <div class="col-md-1 d-none d-md-block text-center bg-white border-end sidebar p-0">
+                <a href="#" class="active">
+                    <span class="material-symbols-outlined">grid_view</span> Dashboard</a>
+                <a href="#">
+                    <span class="material-symbols-outlined">split_scene_left</span>
+                    Leave</a>
+                <a href="#">
+                    <span class="material-symbols-outlined">key</span>
+                    Pay Slip</a>
+            </div>
+
+            <div class="offcanvas offcanvas-start d-md-none bg-white border-end" tabindex="-1" id="sidebar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body sidebar">
+                    <a href="#" class="active">Dashboard</a>
+                    <a href="#">Leave</a>
+                    <a href="#">Pay Slip</a>
+                </div>
+            </div>
+
+            <div class="col p-0">
+                <div class="p-3">
+                    <h5>Leave / Report</h5>
+                    <small>Track your leave and their status here</small>
+
+                    <div class="d-flex justify-content-between align-items-center mt-3 flex-wrap">
+                        <div class="mb-2 d-flex border rounded-3">
+                            <button class="btn btn-outline-secondary border-0 "><i class="fa fa-search"></i></button>
+                            <input type="text" class="form-control border-0" placeholder="Search">
+                        </div>
+                        <div>
+                            <button class="btn btn-outline-secondary me-2">Filter</button>
+                            <button class="btn btn-primary">+ Apply Leave</button>
+                        </div>
+                    </div>
+
+                    <div class="card mt-3">
+                        <div class=" card">
+                            <div class="table border-success">
+                                <table class="table table-hover">
+                                    <thead class="table-info">
+                                        <tr>
+                                            <th>Doc No</th>
+                                            <th>Create Date</th>
+                                            <th>Emp No</th>
+                                            <th>Emp Name</th>
+                                            <th>Emp Type</th>
+                                            <th>Leave Type</th>
+                                            <th>From Date</th>
+                                            <th>To Date</th>
+                                            <th>Days</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr class="bg-light">
+                                            <td>1</td>
+                                            <td>2025-05-03</td>
+                                            <td>1004</td>
+                                            <td>Rashid Saif Khamis Al Badi</td>
+                                            <td>OMANI STAFF</td>
+                                            <td>AL</td>
+                                            <td>2025-05-04</td>
+                                            <td>2025-05-21</td>
+                                            <td>18.00</td>
+                                            <td><span class="badge badge-pending">Pending</span></td>
+                                            <td> <a href="editt.html">
+                                                <button class="btn btn-sm btn-outline-primary me-1">✏️</button>
+                                            </a>
+                                                <button class="btn btn-sm btn-outline-danger">🗑️</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="d-flex position-fixed bottom-0  end-0 me-5 justify-content-end align-items-center gap-3 p-2 flex-wrap w-100">
+                                <div class="me-5">
+                                    Items per page
+                                    <select class="form-select form-select-sm"
+                                        style="width: auto; display: inline-block;">
+                                        <option>10</option>
+                                        <option>20</option>
+                                        <option>50</option>
+                                    </select>
+                                </div>
+                                <div class="me-5">
+                                    1 - 1 of 1
+                                </div>
+                                <div class="me-5 fs-2">
+                                    <button class="btn btn-sm fs-4 bg-transparent border-0 me-2">&laquo;</button>
+                                    <button class="btn btn-sm fs-4 bg-transparent border-0 me-2">&lsaquo;</button>
+                                    <button class="btn btn-sm fs-4 bg-transparent border-0 me-2">&rsaquo;</button>
+                                    <button class="btn btn-sm fs-4 bg-transparent border-0">&raquo;</button>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
