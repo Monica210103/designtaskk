@@ -12,6 +12,7 @@
     <style>
         body {
             background-color: #f9f9f9;
+            overflow-x: hidden;
         }
 
         .sidebar a {
@@ -24,7 +25,7 @@
             text-decoration: none;
         }
 
-        .sidebar{
+        .sidebar {
             height: 87vh;
 
         }
@@ -38,6 +39,10 @@
             background-color: #493089;
             color: #fff;
             padding: 10px 20px;
+            width: 100vw;
+            position: relative;
+            z-index: 999;
+            overflow-x: hidden;
         }
 
         .topbar .profile-img {
@@ -62,25 +67,25 @@
 </head>
 
 <body>
-    <div class="container-fluid p-0">
-        <div class="topbar d-flex justify-content-between align-items-center">
-            <div class="d-flex align-items-center">
-                <button class="btn btn-light me-3 d-md-none" type="button" data-bs-toggle="offcanvas"
-                    data-bs-target="#sidebar" aria-controls="sidebar">☰</button>
-                <div class="fw-bold fs-1 text-success me-4">OCC</div>
-                <div>
-                    Hello, <strong>Rashid Saif Khamis Al Badi</strong><br>
-                    ID : 1004 || OMANI STAFF
-                </div>
-            </div>
-            <div class="d-flex align-items-center">
-                <div class="me-3 text-end me-5">Fri 20-Jun-2025<br>17:11:21</div>
-                <i class="fa-solid fa-bell me-4 "></i>
-                <img src="https://i.pinimg.com/1200x/7c/c3/04/7cc304e8b6d442cc6b927d0168b2757b.jpg" class="profile-img"
-                    alt="profile">
+    <div class="topbar  d-flex justify-content-between align-items-center">
+        <div class="d-flex align-items-center">
+            <button class="btn btn-light me-3 d-md-none" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#sidebar" aria-controls="sidebar">☰</button>
+            <div class="fw-bold fs-1 text-success me-4">OCC</div>
+            <div>
+                Hello, <strong>Rashid Saif Khamis Al Badi</strong><br>
+                ID : 1004 || OMANI STAFF
             </div>
         </div>
+        <div class="d-flex align-items-center">
+            <div class="me-3 text-end me-5">Fri 20-Jun-2025<br>17:11:21</div>
+            <i class="fa-solid fa-bell me-4 "></i>
+            <img src="https://i.pinimg.com/1200x/7c/c3/04/7cc304e8b6d442cc6b927d0168b2757b.jpg" class="profile-img"
+                alt="profile">
+        </div>
+    </div>
 
+    <div class="container-fluid p-0">
         <div class="row g-0">
             <div class="col-md-1 d-none d-md-block text-center bg-white border-end sidebar p-0">
                 <a href="#" class="active">
@@ -122,8 +127,8 @@
                     </div>
 
                     <div class="card mt-3">
-                        <div class=" card">
-                            <div class="table border-success">
+                        <div class=" card-body p-0">
+                            <div class="table-responsive border-success">
                                 <table class="table table-hover">
                                     <thead class="table-info">
                                         <tr>
@@ -153,8 +158,8 @@
                                             <td>18.00</td>
                                             <td><span class="badge badge-pending">Pending</span></td>
                                             <td> <a href="editt.html">
-                                                <button class="btn btn-sm btn-outline-primary me-1">✏️</button>
-                                            </a>
+                                                    <button class="btn btn-sm btn-outline-primary me-1">✏️</button>
+                                                </a>
                                                 <button class="btn btn-sm btn-outline-danger">🗑️</button>
                                             </td>
                                         </tr>
@@ -162,7 +167,8 @@
                                 </table>
                             </div>
 
-                            <div class="d-flex position-fixed bottom-0  end-0 me-5 justify-content-end align-items-center gap-3 p-2 flex-wrap w-100">
+                            <div
+                                class="d-flex position-fixed bottom-0  end-0 me-5 justify-content-end align-items-center gap-3 p-2 flex-wrap w-100">
                                 <div class="me-5">
                                     Items per page
                                     <select class="form-select form-select-sm"
